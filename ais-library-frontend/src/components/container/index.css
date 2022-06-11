@@ -1,0 +1,17 @@
+.containerwrap-enter{
+    opacity: 0;
+}
+
+.containerwrap-enter-active{
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+
+.containerwrap-exit{
+    opacity: 1;
+}
+
+.containerwrap-exit-active{
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+}

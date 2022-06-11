@@ -1,0 +1,18 @@
+.chore-enter{
+    opacity: 0;
+}
+
+.chore-enter-active{
+    opacity: 1;
+    transition: opacity 200s ease-in;
+}
+
+.chore-exit{
+    opacity: 1;
+}
+
+.chore-exit-active{
+    opacity: 0;
+    transition: opacity 200s ease-in;
+}
+

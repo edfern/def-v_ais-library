@@ -1,0 +1,65 @@
+server:
+  port: 9191
+spring:
+  profiles:
+    active: development-alt
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: development
+  mvc:
+    converters:
+      preferred-json-mapper: gson
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/AntiguaInternational?serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: root
+    password: admin
+  gson:
+    date-format: "dd-MM-yyyy hh:mm:ss"
+ais-library:
+  dir-url: "books-images"
+cors-url: 'http://localhost:3000'
+
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: development-alt
+  mvc:
+    converters:
+      preferred-json-mapper: gson
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/AntiguaInternational?serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: root
+    password: fernando
+  gson:
+    date-format: "dd-MM-yyyy hh:mm:ss"
+ais-library:
+  dir-url: "books-images"
+cors-url: 'http://library.localhost'
+
+---
+spring:
+  config:
+    activate:
+      on-profile: production
+  mvc:
+    converters:
+      preferred-json-mapper: gson
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://YOURHOST:3306/AntiguaInternational
+    username: USER
+    password: PASS
+  gson:
+    date-format: "dd-MM-yyyy hh:mm:ss"
+ais-library:
+  dir-url: YOUR_DIR_HOST
+cors-url: 'https://YOUR_DOMAIN'
